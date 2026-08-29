@@ -1,0 +1,19 @@
+FROM node:24-bookworm-slim AS frontend
+WORKDIR /build/frontend
+COPY frontend/package*.json ./
+RUN npm ci
+COPY frontend/ ./
+RUN npm run build
+
+FROM python:3.13-slim
+COPY --from=ghcr.io/astral-sh/uv:0.12.5 /uv /uvx /bin/
+WORKDIR /app
+ENV UV_COMPILE_BYTECODE=1 \
+    UV_LINK_MODE=copy \
+    PHOTO_OGIRI_FRONTEND_PATH=/app/frontend/dist
+COPY pyproject.toml uv.lock README.md ./
+COPY src/ ./src/
+RUN uv sync --frozen --no-dev --no-group ai
+COPY --from=frontend /build/frontend/dist ./frontend/dist
+EXPOSE 8000
+CMD ["/app/.venv/bin/photo-ogiri-api"]

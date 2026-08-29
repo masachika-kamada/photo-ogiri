@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap');
+:root { font-family: 'BIZ UDPGothic', sans-serif; color: #17201e; background: #f4f2ec; font-synthesis: none; text-rendering: optimizeLegibility; letter-spacing: 0; --ink:#17201e; --paper:#f4f2ec; --white:#fffefb; --red:#ed4b35; --yellow:#f4c949; --green:#1e7257; --line:#d3d0c5; --muted:#6e746f; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background-image: linear-gradient(rgba(23,32,30,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(23,32,30,.035) 1px,transparent 1px); background-size:28px 28px; }
+button,input,textarea,select { font:inherit; letter-spacing:0; }
+button { cursor:pointer; } button:disabled { cursor:not-allowed; opacity:.55; }
+img { display:block; max-width:100%; } h1,h2,p { margin-top:0; } #root { min-height:100vh; }

@@ -1,0 +1,1 @@
+"""AI-judged multiplayer photo game."""

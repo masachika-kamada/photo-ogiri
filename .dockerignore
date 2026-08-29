@@ -1,0 +1,17 @@
+.git
+.venv
+.pytest_cache
+data
+images
+frontend/node_modules
+frontend/dist
+__pycache__
+*.pyc
+.env
+.env.*
+**/.env
+**/.env.*
+*.key
+*.pem
+*.pfx
+*.p12

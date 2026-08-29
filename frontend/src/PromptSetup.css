@@ -1,0 +1,156 @@
+.entry-console {
+    justify-content: flex-start;
+}
+
+.prompt-setup {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.prompt-setup legend {
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.prompt-mode-control {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3px;
+    background: #efeee9;
+    border: 1px solid var(--line);
+}
+
+.prompt-mode-control button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.prompt-mode-control button.active {
+    background: var(--white);
+    color: var(--ink);
+    font-weight: 700;
+    box-shadow: 0 1px 4px rgba(30, 39, 37, 0.12);
+}
+
+.pack-options {
+    display: grid;
+    gap: 7px;
+}
+
+.pack-options label {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    cursor: pointer;
+}
+
+.pack-options label.selected {
+    border-color: var(--green);
+    box-shadow: inset 3px 0 var(--green);
+}
+
+.pack-options input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.pack-options span {
+    display: grid;
+    gap: 2px;
+}
+
+.pack-options b {
+    font-size: 13px;
+}
+
+.pack-options small,
+.custom-prompts small {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.pack-options svg {
+    color: var(--green);
+    opacity: 0;
+}
+
+.pack-options label.selected svg {
+    opacity: 1;
+}
+
+.game-settings.single {
+    grid-template-columns: 1fr;
+}
+
+.lobby-code strong {
+    font-size: clamp(44px, 5.5vw, 64px);
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+.host-join {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.host-join input,
+.host-join button {
+    min-height: 44px;
+}
+
+.host-join input {
+    min-width: 0;
+    border: 1px solid var(--line);
+    padding: 0 12px;
+}
+
+.host-join button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 1px solid var(--ink);
+    background: transparent;
+    padding: 0 16px;
+    font-weight: 700;
+}
+
+.host-upload-stage {
+    border-top: 1px solid var(--line);
+}
+
+.custom-prompts textarea {
+    min-height: 128px;
+    resize: vertical;
+}
+
+@media (max-width: 760px) {
+    .host-join {
+        grid-template-columns: 1fr;
+    }
+
+}
