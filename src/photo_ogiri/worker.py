@@ -15,7 +15,7 @@ async def run_worker() -> None:
 
     queue = AzureScoringQueue(settings)
     print("Loading the SigLIP judge...", flush=True)
-    await judge.warmup()
+    await judge.load_model()
     print("Scoring worker is ready", flush=True)
     while True:
         found_message = False

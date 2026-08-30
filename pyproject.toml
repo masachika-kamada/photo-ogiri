@@ -33,7 +33,7 @@ dev = [
 ai = [
     "numpy>=2.0",
     "torch>=2.7",
-    "transformers>=4.53",
+    "transformers>=5.0,<6",
 ]
 
 [build-system]

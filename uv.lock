@@ -1716,7 +1716,7 @@ requires-dist = [
 ai = [
     { name = "numpy", specifier = ">=2.0" },
     { name = "torch", specifier = ">=2.7" },
-    { name = "transformers", specifier = ">=4.53" },
+    { name = "transformers", specifier = ">=5.0,<6" },
 ]
 dev = [
     { name = "httpx", specifier = ">=0.28" },
